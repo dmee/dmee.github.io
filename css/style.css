@@ -4,9 +4,12 @@
 * {
   color: var(--color_primaryLight);
   margin: 0;
-  padding-inline-start: 0;
-  margin-block-end: 0;
-  margin-block-start: 0;
+  -webkit-padding-start: 0;
+          padding-inline-start: 0;
+  -webkit-margin-after: 0;
+          margin-block-end: 0;
+  -webkit-margin-before: 0;
+          margin-block-start: 0;
   list-style: none;
   text-decoration: none;
   font-family: 'Roboto', 'Open Sans', Arial, Helvetica;
@@ -37,9 +40,12 @@ body {
 
 .main-content {
   background-color: var(--color_secondaryDark);
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   min-height: 40vh;
 }
 
@@ -48,10 +54,13 @@ body {
 }
 
 .main-footer {
-  align-items: center;
+  -ms-flex-align: center;
+      align-items: center;
   color: var(--color_primaryAcent);
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-around;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 .navbar {
@@ -84,11 +93,15 @@ body {
 }
 
 .main-header {
-  align-items: center;
+  -ms-flex-align: center;
+      align-items: center;
+  display: -ms-flexbox;
   display: flex;
   height: 30vh;
-  flex-direction: column;
-  justify-content: center;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-pack: center;
+      justify-content: center;
 }
 
 .main-header__title {
@@ -100,8 +113,6 @@ body {
   background-attachment: fixed;
   background-image: var(--image_header);
   background-size: contain;
-
-  -webkit-filter: blur(10px) contrast(150%) saturate(50%);
   -moz-filter: blur(10px) contrast(150%) saturate(50%);
   -o-filter: blur(10px) contrast(150%) saturate(50%);
   -ms-filter: blur(10px) contrast(150%) saturate(50%);
@@ -114,8 +125,10 @@ body {
 }
 .main-header__container__description {
   width: 100%;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
 }
 .pagination {
 	margin-top: 25px;
@@ -137,13 +150,16 @@ body {
 .posts {
   position: relative;
   text-align: center;
-  flex-basis: 33.3%;
+  -ms-flex-preferred-size: 33.3%;
+      flex-basis: 33.3%;
 }
 .posts__post {
   border: 1px solid;
   border-radius: 3.5px;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   font-size: 0.8em;
   margin-top: 20px; 
   padding: 10px 0;
@@ -176,9 +192,12 @@ body {
 .tags {
 	width: 100%;
 	height: 70px;
+	display: -ms-flexbox;
 	display: flex;
-	align-items: center;
-	justify-content: center;
+	-ms-flex-align: center;
+	    align-items: center;
+	-ms-flex-pack: center;
+	    justify-content: center;
 }
 
 .categories__container, 
@@ -187,9 +206,12 @@ body {
 	overflow-x: auto;
 	overflow-y: hidden;
 	width: 33.3%;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-	align-items: center;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+	-ms-flex-align: center;
+	    align-items: center;
 }
 
 .categories__category,
@@ -209,9 +231,12 @@ body {
 }
 
 .social-icons {
-  align-items: center;
+  -ms-flex-align: center;
+      align-items: center;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-around;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 .icon {
@@ -266,8 +291,10 @@ body {
 
 @media screen and (max-width: 480px) {
   .main-footer {
-    flex-wrap: wrap;
-    justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: center;
+        justify-content: center;
     height: 10vh;
   }
   .contact {
@@ -283,7 +310,8 @@ body {
     text-align: center;
   }
   .posts {
-    flex-basis: 90%;
+    -ms-flex-preferred-size: 90%;
+        flex-basis: 90%;
   }
   .pagination {
     margin: 0;
@@ -295,8 +323,10 @@ body {
     width: 90%;
   }
   .main-footer {
-    flex-wrap: wrap;
-    justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: center;
+        justify-content: center;
   }
   .contact {
     width: 100%;
