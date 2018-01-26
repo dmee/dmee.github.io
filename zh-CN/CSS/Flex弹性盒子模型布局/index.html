@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    
+        <link rel="icon" href="/favicon.png">
+    
+        <meta name="robots" content="index, follow">
+    
+        <meta name="author" content="niki">
+    
+    
+    
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>DaMing | Flex弹性盒子模型布局</title>
+    
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body itemscope itemprop="blogPost">
+    <nav class="navbar clear">
+    <a 
+        href="/" 
+        class="navbar__title"
+        title="Go to home">
+        DaMing</a>
+</nav>
+<header class="main-header">
+    <div class="main-header__background"></div>
+    <div class="main-header__container">        
+        <h1 class="main-header__title" itemprop="name">
+            Flex弹性盒子模型布局</h1>
+        <p class="main-header__container__description">
+            <a 
+                class="description__category" 
+                href="/categories/CSS"
+                tilte="Category">CSS</a>
+            <br>
+            <time 
+                class="description__day" 
+                datetime="2018-01-26" 
+                title="Puclicado em 26 1月 2018"
+                itemprop="datePublished">26 1月 18 17h 4m</time>        
+        </p>
+    </div>
+</header>
+<main class="main-content">
+    <div 
+        class="main-content__container markdown" 
+        itemprop="articleBody">
+        <h1 id="容器的属性"><a href="#容器的属性" class="headerlink" title="容器的属性"></a>容器的属性</h1><h2 id="1、display"><a href="#1、display" class="headerlink" title="1、display"></a>1、display</h2><ul>
+<li>flex</li>
+<li>inline-flex</li>
+</ul>
+<blockquote>
+<p>注意： 设为 Flex 布局以后，子元素的float、clear和vertical-align属性将失效。</p>
+</blockquote>
+<h2 id="2、flex-direction"><a href="#2、flex-direction" class="headerlink" title="2、flex-direction"></a>2、flex-direction</h2><h3 id="属性决定主轴的方向（即项目的排列方向）："><a href="#属性决定主轴的方向（即项目的排列方向）：" class="headerlink" title="属性决定主轴的方向（即项目的排列方向）："></a>属性决定主轴的方向（即项目的排列方向）：</h3><ul>
+<li>row（默认值）：主轴为水平方向，起点在左端。</li>
+<li>row-reverse：主轴为水平方向，起点在右端。</li>
+<li>column：主轴为垂直方向，起点在上沿。</li>
+<li>column-reverse：主轴为垂直方向，起点在下沿。</li>
+</ul>
+<h2 id="3、flex-wrap"><a href="#3、flex-wrap" class="headerlink" title="3、flex-wrap"></a>3、flex-wrap</h2><ul>
+<li>nowrap：不换行</li>
+<li>wrap：换行，新行在下方</li>
+<li>wrap-reverse：换行，新行在上方</li>
+</ul>
+<h2 id="4、flex-flow"><a href="#4、flex-flow" class="headerlink" title="4、flex-flow"></a>4、flex-flow</h2><blockquote>
+<p>是 <em>flex-direction</em>属性和<em>flex-wrap</em>属性的简写形式，默认值为<em>row nowrap</em></p>
+</blockquote>
+<h2 id="5、justify-content"><a href="#5、justify-content" class="headerlink" title="5、justify-content"></a>5、justify-content</h2><blockquote>
+<p>定义了项目在主轴上的对齐方式</p>
+</blockquote>
+<ul>
+<li>flex-start（默认值）：左对齐</li>
+<li>flex-end：右对齐</li>
+<li>center： 居中</li>
+<li>space-between：两端对齐，项目之间的间隔都相等。</li>
+<li>space-around：每个项目两侧的间隔相等。所以，项目之间的间隔比项目与边框的间隔大一倍。</li>
+</ul>
+<p><img src="/static/images/css/flex/justify-content.png" alt=""></p>
+<h2 id="6、align-items"><a href="#6、align-items" class="headerlink" title="6、align-items"></a>6、align-items</h2><blockquote>
+<p>定义项目在交叉轴上如何对齐</p>
+</blockquote>
+<ul>
+<li>flex-start：交叉轴的起点对齐。</li>
+<li>flex-end：交叉轴的终点对齐。</li>
+<li>center：交叉轴的中点对齐。</li>
+<li>baseline: 项目的第一行文字的基线对齐。</li>
+<li>stretch（默认值）：如果项目未设置高度或设为auto，将占满整个容器的高度</li>
+</ul>
+<p><img src="/static/images/css/flex/align-items.png" alt=""></p>
+<h2 id="7、align-content"><a href="#7、align-content" class="headerlink" title="7、align-content"></a>7、align-content</h2><blockquote>
+<p>定义了多根轴线的对齐方式。如果项目只有一根轴线，该属性不起作用</p>
+</blockquote>
+<ul>
+<li>flex-start：与交叉轴的起点对齐。</li>
+<li>flex-end：与交叉轴的终点对齐。</li>
+<li>center：与交叉轴的中点对齐。</li>
+<li>space-between：与交叉轴两端对齐，轴线之间的间隔平均分布。</li>
+<li>space-around：每根轴线两侧的间隔都相等。所以，轴线之间的间隔比轴线与边框的间隔大一倍。</li>
+<li>stretch（默认值）：轴线占满整个交叉轴。</li>
+</ul>
+<p><img src="/static/images/css/flex/align-content.png" alt=""></p>
+<h1 id="项目的属性"><a href="#项目的属性" class="headerlink" title="项目的属性"></a>项目的属性</h1><h2 id="1、order"><a href="#1、order" class="headerlink" title="1、order"></a>1、order</h2><blockquote>
+<p>定义项目的排列顺序。数值越小，排列越靠前，默认为0</p>
+<h2 id="2、flex-grow"><a href="#2、flex-grow" class="headerlink" title="2、flex-grow"></a>2、flex-grow</h2><p>定义项目的放大比例，默认为0，即如果存在剩余空间，也不放大</p>
+</blockquote>
+<h2 id="3、flex-shrink"><a href="#3、flex-shrink" class="headerlink" title="3、flex-shrink"></a>3、flex-shrink</h2><blockquote>
+<p>定义了项目的缩小比例，默认为1，即如果空间不足，该项目将缩小。</p>
+<h2 id="4、flex-basis"><a href="#4、flex-basis" class="headerlink" title="4、flex-basis"></a>4、flex-basis</h2><p>定义了在分配多余空间之前，项目占据的主轴空间（main size）。浏览器根据这个属性，计算主轴是否有多余空间。它的默认值为auto，即项目的本来大小。</p>
+</blockquote>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.item</span> &#123;</span><br><span class="line">  <span class="attribute">flex-basis</span>: &lt;length&gt; | auto; <span class="comment">/* default auto */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="5、flex"><a href="#5、flex" class="headerlink" title="5、flex"></a>5、flex</h2><blockquote>
+<p>是flex-grow, flex-shrink 和 flex-basis的简写，默认值为0 1 auto。后两个属性可选</p>
+</blockquote>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.item</span> &#123;</span><br><span class="line">  <span class="attribute">flex</span>: none | [ &lt;<span class="string">'flex-grow'</span>&gt; &lt;<span class="string">'flex-shrink'</span>&gt;? || &lt;<span class="string">'flex-basis'</span>&gt; ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="6、align-self"><a href="#6、align-self" class="headerlink" title="6、align-self"></a>6、align-self</h2><blockquote>
+<p>允许单个项目有与其他项目不一样的对齐方式，可覆盖align-items属性。默认值为auto，表示继承父元素的align-items属性，如果没有父元素，则等同于stretch。<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.item</span> &#123;</span><br><span class="line">  <span class="attribute">align-self</span>: auto | flex-start | flex-end | center | baseline | stretch;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<p><img src="/static/images/css/flex/align-self.png" alt=""></p>
+</div>
+
+            
+
+        <h5 class="divisor">标签</h5>
+        <section class="tags">
+            <div class="tags__container">
+             
+                <a 
+                    class="tags__tag" 
+                    href="/tags/CSS-Flex"
+                    tilte="Tag">CSS Flex</a>         
+            
+            </div>
+        </section>
+
+    
+</main>
+    <script src="/scripts/script.js"></script>
+    
+</body>
+</html>
