@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    
+        <link rel="icon" href="/favicon.png">
+    
+        <meta name="robots" content="index, follow">
+    
+        <meta name="author" content="niki">
+    
+    
+    
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>DaMing | Linux防火墙管理及端口配置</title>
+    
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body itemscope itemprop="blogPost">
+    <nav class="navbar clear">
+    <a 
+        href="/" 
+        class="navbar__title"
+        title="Go to home">
+        DaMing</a>
+</nav>
+<header class="main-header">
+    <div class="main-header__background"></div>
+    <div class="main-header__container">        
+        <h1 class="main-header__title" itemprop="name">
+            Linux防火墙管理及端口配置</h1>
+        <p class="main-header__container__description">
+            <a 
+                class="description__category" 
+                href="/categories/Linux"
+                tilte="Category">Linux</a>
+            <br>
+            <time 
+                class="description__day" 
+                datetime="2018-01-26" 
+                title="Puclicado em 2018-01-26 14:36:38"
+                itemprop="datePublished">2018-01-26 14:36:38</time>        
+        </p>
+    </div>
+</header>
+<main class="main-content">
+    <div 
+        class="main-content__container markdown" 
+        itemprop="articleBody">
+        <h2 id="防火墙开关（重启后生效）"><a href="#防火墙开关（重启后生效）" class="headerlink" title="防火墙开关（重启后生效）"></a>防火墙开关（重启后生效）</h2><ul>
+<li>开启：chkconfig iptables on</li>
+<li>关闭：chkconfig iptables off</li>
+</ul>
+<h2 id="防火墙开关（即时生效，重启后失效）"><a href="#防火墙开关（即时生效，重启后失效）" class="headerlink" title="防火墙开关（即时生效，重启后失效）"></a>防火墙开关（即时生效，重启后失效）</h2><ul>
+<li>开启：service iptables start</li>
+<li>关闭：service iptables stop</li>
+</ul>
+<h2 id="配置端口开放"><a href="#配置端口开放" class="headerlink" title="配置端口开放"></a>配置端口开放</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/sysconfig/iptables</span><br><span class="line"></span><br><span class="line">-A INPUT -p tcp -m state --state NEW -m tcp --dport 80 -j ACCEPT</span><br><span class="line">-A INPUT -p tcp -m state --state NEW -m tcp --dport 3306 -j ACCEPT</span><br></pre></td></tr></table></figure></div>
+
+            
+
+        <h5 class="divisor">标签</h5>
+        <section class="tags">
+            <div class="tags__container">
+             
+                <a 
+                    class="tags__tag" 
+                    href="/tags/Linux"
+                    tilte="Tag">Linux</a>         
+            
+            </div>
+        </section>
+
+    
+</main>
+    <script src="/scripts/script.js"></script>
+    
+</body>
+</html>

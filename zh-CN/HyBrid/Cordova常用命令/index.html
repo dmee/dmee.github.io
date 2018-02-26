@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    
+        <link rel="icon" href="/favicon.png">
+    
+        <meta name="robots" content="index, follow">
+    
+        <meta name="author" content="niki">
+    
+    
+    
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>DaMing | Cordova常用命令</title>
+    
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body itemscope itemprop="blogPost">
+    <nav class="navbar clear">
+    <a 
+        href="/" 
+        class="navbar__title"
+        title="Go to home">
+        DaMing</a>
+</nav>
+<header class="main-header">
+    <div class="main-header__background"></div>
+    <div class="main-header__container">        
+        <h1 class="main-header__title" itemprop="name">
+            Cordova常用命令</h1>
+        <p class="main-header__container__description">
+            <a 
+                class="description__category" 
+                href="/categories/HyBrid"
+                tilte="Category">HyBrid</a>
+            <br>
+            <time 
+                class="description__day" 
+                datetime="2018-01-30" 
+                title="Puclicado em 2018-01-30 23:15:24"
+                itemprop="datePublished">2018-01-30 23:15:24</time>        
+        </p>
+    </div>
+</header>
+<main class="main-content">
+    <div 
+        class="main-content__container markdown" 
+        itemprop="articleBody">
+        <h2 id="创建工程"><a href="#创建工程" class="headerlink" title="创建工程"></a>创建工程</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cordova create projectName</span><br></pre></td></tr></table></figure>
+<h4 id="案例"><a href="#案例" class="headerlink" title="案例"></a>案例</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cordova create projectName package Title</span><br></pre></td></tr></table></figure>
+<ul>
+<li>projectName 工程名称</li>
+<li>package 反向域名值，类似于java包命名</li>
+<li>Title 应用程序的标题</li>
+</ul>
+<h2 id="添加平台"><a href="#添加平台" class="headerlink" title="添加平台"></a>添加平台</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cordova platform add platformName</span><br></pre></td></tr></table></figure>
+<ul>
+<li>platformName 平台名称，android、ios、browser</li>
+</ul>
+<h2 id="移除平台"><a href="#移除平台" class="headerlink" title="移除平台"></a>移除平台</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cordova platform rm platformName</span><br></pre></td></tr></table></figure>
+<h2 id="构建项目"><a href="#构建项目" class="headerlink" title="构建项目"></a>构建项目</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cordova build platformName</span><br></pre></td></tr></table></figure>
+<h2 id="在模拟器上运行-前提是创建好AVD"><a href="#在模拟器上运行-前提是创建好AVD" class="headerlink" title="在模拟器上运行(前提是创建好AVD)"></a>在模拟器上运行(前提是创建好AVD)</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cordova emulate platformName</span><br></pre></td></tr></table></figure>
+<h2 id="在浏览器运行"><a href="#在浏览器运行" class="headerlink" title="在浏览器运行"></a>在浏览器运行</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cordova serve android</span><br></pre></td></tr></table></figure>
+<h2 id="编译和运行项目"><a href="#编译和运行项目" class="headerlink" title="编译和运行项目"></a>编译和运行项目</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cordova run platformName</span><br></pre></td></tr></table></figure>
+<h2 id="查看插件列表"><a href="#查看插件列表" class="headerlink" title="查看插件列表"></a>查看插件列表</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cordova plugin list</span><br></pre></td></tr></table></figure>
+<h2 id="添加插件"><a href="#添加插件" class="headerlink" title="添加插件"></a>添加插件</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cordova plugin add PluginName</span><br></pre></td></tr></table></figure>
+<h2 id="删除插件"><a href="#删除插件" class="headerlink" title="删除插件"></a>删除插件</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cordova plugin remove PluginName</span><br></pre></td></tr></table></figure>
+</div>
+
+            
+
+        <h5 class="divisor">标签</h5>
+        <section class="tags">
+            <div class="tags__container">
+             
+                <a 
+                    class="tags__tag" 
+                    href="/tags/Cordova"
+                    tilte="Tag">Cordova</a>         
+            
+            </div>
+        </section>
+
+    
+</main>
+    <script src="/scripts/script.js"></script>
+    
+</body>
+</html>

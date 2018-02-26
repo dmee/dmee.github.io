@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    
+        <link rel="icon" href="/favicon.png">
+    
+        <meta name="robots" content="index, follow">
+    
+        <meta name="author" content="niki">
+    
+    
+    
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>DaMing | Mac配置环境变量</title>
+    
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body itemscope itemprop="blogPost">
+    <nav class="navbar clear">
+    <a 
+        href="/" 
+        class="navbar__title"
+        title="Go to home">
+        DaMing</a>
+</nav>
+<header class="main-header">
+    <div class="main-header__background"></div>
+    <div class="main-header__container">        
+        <h1 class="main-header__title" itemprop="name">
+            Mac配置环境变量</h1>
+        <p class="main-header__container__description">
+            <a 
+                class="description__category" 
+                href="/categories/basic"
+                tilte="Category">basic</a>
+            <br>
+            <time 
+                class="description__day" 
+                datetime="2018-01-30" 
+                title="Puclicado em 2018-01-30 23:09:38"
+                itemprop="datePublished">2018-01-30 23:09:38</time>        
+        </p>
+    </div>
+</header>
+<main class="main-content">
+    <div 
+        class="main-content__container markdown" 
+        itemprop="articleBody">
+        <h2 id="加载顺序"><a href="#加载顺序" class="headerlink" title="加载顺序"></a>加载顺序</h2><ul>
+<li>1、 /etc/profile</li>
+<li>2、 /etc/paths </li>
+<li>3、 ~/.bash_profile</li>
+<li>4、 ~/.bash_login</li>
+<li>5、 ~/.profile</li>
+<li>6、 ~/.bashrc</li>
+</ul>
+<p>当然/etc/profile和/etc/paths是系统级别的，系统启动就会加载，后面几个是当前用户级的环境变量。后面3个按照从前往后的顺序读取，如果~/.bash_profile文件存在，则后面的几个文件就会被忽略不读了，如果~/.bash_profile文件不存在，才会以此类推读取后面的文件。~/.bashrc没有上述规则，它是bash shell打开的时候载入的。</p>
+<h2 id="设置PATH的语法"><a href="#设置PATH的语法" class="headerlink" title="设置PATH的语法"></a>设置PATH的语法</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#中间用冒号隔开</span></span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$PATH</span>:&lt;PATH 1&gt;:&lt;PATH 2&gt;:&lt;PATH 3&gt;:------:&lt;PATH N&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="全局设置"><a href="#全局设置" class="headerlink" title="全局设置"></a>全局设置</h2><p>下面的几个文件设置是全局的，修改时需要root权限</p>
+<h4 id="etc-paths-（全局建议修改这个文件-）"><a href="#etc-paths-（全局建议修改这个文件-）" class="headerlink" title="/etc/paths （全局建议修改这个文件 ）"></a>/etc/paths （全局建议修改这个文件 ）</h4><p>编辑 paths，将环境变量添加到 paths文件中 ，一行一个路径<br>Hint：输入环境变量时，不用一个一个地输入，只要拖动文件夹到 Terminal 里就可以了。</p>
+<h4 id="etc-profile-（建议不修改这个文件-）"><a href="#etc-profile-（建议不修改这个文件-）" class="headerlink" title="/etc/profile （建议不修改这个文件 ）"></a>/etc/profile （建议不修改这个文件 ）</h4><p>全局（公有）配置，不管是哪个用户，登录时都会读取该文件。</p>
+<h4 id="etc-bashrc-（一般在这个文件中添加系统级环境变量）"><a href="#etc-bashrc-（一般在这个文件中添加系统级环境变量）" class="headerlink" title="/etc/bashrc （一般在这个文件中添加系统级环境变量）"></a>/etc/bashrc （一般在这个文件中添加系统级环境变量）</h4><p>全局（公有）配置，bash shell执行时，不管是何种方式，都会读取此文件。</p>
+<h2 id="单个用户设置"><a href="#单个用户设置" class="headerlink" title="单个用户设置"></a>单个用户设置</h2><p>~/.bash_profile （任意一个文件中添加用户级环境变量）<br>（注：Linux 里面是 .bashrc 而 Mac 是 .bash_profile）<br>若bash shell是以login方式执行时，才会读取此文件。该文件仅仅执行一次!默认情况下,他设置一些环境变量。<br>设置命令别名<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">alias</span> ll=’ls -la’</span><br></pre></td></tr></table></figure></p>
+<p>设置环境变量：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> PATH=/opt/<span class="built_in">local</span>/bin:/opt/<span class="built_in">local</span>/sbin:<span class="variable">$PATH</span></span><br></pre></td></tr></table></figure></p>
+<p><strong>~/.bashrc 同上</strong></p>
+<p>如果想立刻生效，则可执行下面的语句：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">source</span> 相应的文件</span><br></pre></td></tr></table></figure></p>
+<p>一般环境变量更改后，重启后生效。</p>
+</div>
+
+            
+
+        <h5 class="divisor">标签</h5>
+        <section class="tags">
+            <div class="tags__container">
+             
+                <a 
+                    class="tags__tag" 
+                    href="/tags/Mac"
+                    tilte="Tag">Mac</a>         
+            
+            </div>
+        </section>
+
+    
+</main>
+    <script src="/scripts/script.js"></script>
+    
+</body>
+</html>
