@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    
+        <link rel="icon" href="/favicon.png">
+    
+        <meta name="robots" content="index, follow">
+    
+        <meta name="author" content="niki">
+    
+    
+    
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>DaMing | HTML常见面试题</title>
+    
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body itemscope itemprop="blogPost">
+    <nav class="navbar clear">
+    <a 
+        href="/" 
+        class="navbar__title"
+        title="Go to home">
+        DaMing</a>
+</nav>
+<header class="main-header">
+    <div class="main-header__background"></div>
+    <div class="main-header__container">        
+        <h1 class="main-header__title" itemprop="name">
+            HTML常见面试题</h1>
+        <p class="main-header__container__description">
+            <a 
+                class="description__category" 
+                href="/categories/HTML"
+                tilte="Category">HTML</a>
+            <br>
+            <time 
+                class="description__day" 
+                datetime="2018-03-29" 
+                title="Puclicado em 2018-03-29 16:41:34"
+                itemprop="datePublished">2018-03-29 16:41:34</time>        
+        </p>
+    </div>
+</header>
+<main class="main-content">
+    <div 
+        class="main-content__container markdown" 
+        itemprop="articleBody">
+        <h2 id="1、HTML与XHTML的区别"><a href="#1、HTML与XHTML的区别" class="headerlink" title="1、HTML与XHTML的区别"></a>1、HTML与XHTML的区别</h2><ul>
+<li>XHTML元素必须被正确地嵌套。</li>
+<li>XHTML元素必须被关闭。</li>
+<li>XHTML标签内容一些特殊字符需要转义一下。</li>
+<li>XHTML的标签与属性对大小写敏感，必须用小写字母。</li>
+<li>XHTML文档必须拥有根元素，属性值必须要用双引号包裹且不能为空值。</li>
+</ul>
+<h2 id="2、指定文件缓存：manifest"><a href="#2、指定文件缓存：manifest" class="headerlink" title="2、指定文件缓存：manifest"></a>2、指定文件缓存：manifest</h2><h4 id="①-文件缓存的优势"><a href="#①-文件缓存的优势" class="headerlink" title="① 文件缓存的优势"></a>① 文件缓存的优势</h4><ul>
+<li>离线浏览 - 用户可在应用离线时使用它们</li>
+<li>速度 - 已缓存资源加载得更快</li>
+<li>减少服务器负载 - 浏览器将只从服务器下载更新过或更改过的资源。<h4 id="②-使用方法"><a href="#②-使用方法" class="headerlink" title="② 使用方法"></a>② 使用方法</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE HTML&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">manifest</span>=<span class="string">"demo.appcache"</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">文档内容......</span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="③-Manifest-File"><a href="#③-Manifest-File" class="headerlink" title="③ Manifest File"></a>③ Manifest File</h4><ul>
+<li>CACHE MANIFEST - 在此标题下列出的文件将在首次下载后进行缓存</li>
+<li>NETWORK - 在此标题下列出的文件需要与服务器的连接，且不会被缓存</li>
+<li>FALLBACK - 在此标题下列出的文件规定当页面无法访问时的回退页面（比如 404 页面）</li>
+</ul>
+<h2 id="3、Doctype作用？几种模式？"><a href="#3、Doctype作用？几种模式？" class="headerlink" title="3、Doctype作用？几种模式？"></a>3、Doctype作用？几种模式？</h2><h4 id="①-Doctype是什么，有什么作用？"><a href="#①-Doctype是什么，有什么作用？" class="headerlink" title="① Doctype是什么，有什么作用？"></a>① Doctype是什么，有什么作用？</h4><ul>
+<li>DOCTYPE是document type(文档类型的）的简写。用来说明你用的是XHTML或HTML是什么版本。</li>
+<li>浏览器通过读取DOCTYPE来解析文档</li>
+</ul>
+<h4 id="②-严格模式与混合模式"><a href="#②-严格模式与混合模式" class="headerlink" title="② 严格模式与混合模式"></a>② 严格模式与混合模式</h4><ul>
+<li>严格模式：又称标准模式，是指浏览器按照 W3C 标准解析代码。</li>
+<li>混合模式：又称怪异模式或兼容模式，是指浏览器用自己的方式解析代码。</li>
+</ul>
+<h4 id="③-不同模式有什么意义？"><a href="#③-不同模式有什么意义？" class="headerlink" title="③ 不同模式有什么意义？"></a>③ 不同模式有什么意义？</h4><p>严格模式与混杂模式存在的意义与其来源密切相关，如果说只存在严格模式，那么许多旧网站必然受到影响，如果只存在混杂模式，那么会回到当时浏览器大战时的混乱，每个浏览器都有自己的解析模式。</p>
+<h2 id="4、介绍一下你对浏览器内核的理解？"><a href="#4、介绍一下你对浏览器内核的理解？" class="headerlink" title="4、介绍一下你对浏览器内核的理解？"></a>4、介绍一下你对浏览器内核的理解？</h2><h4 id="①-常见内核"><a href="#①-常见内核" class="headerlink" title="① 常见内核"></a>① 常见内核</h4><ul>
+<li>Trident：是IE的内核，也就是国内双核浏览器的内核之一。Trident内核一直延续到IE11,IE11的后继者Edge采用了新内核EdgeHTML。</li>
+<li>Gecko：firefox内核</li>
+<li>Webkit：Safari、Chrome</li>
+<li>Chromium（BLink V8）</li>
+<li>Presto：Opera</li>
+</ul>
+<h4 id="②-内核简介"><a href="#②-内核简介" class="headerlink" title="② 内核简介"></a>② 内核简介</h4><ul>
+<li>主要分成两个部分：渲染引擎(Render Engine)和JS引擎。</li>
+<li>渲染引擎：负责取得网页的内容(html,xml和图像等)，整理讯息(例如假如css)，以及计算网页的显示方式，然后输出到显示器或打印机。浏览器的内核的不同对于网页的语法解释会有不同，所以渲染的效果也不同。所有网页浏览器、电子邮件客户端以及它需要编辑、显示网络内容的应用程序都需要内核。</li>
+<li>JS引擎：解析和执行JavaScript来实现网页的动态效果。</li>
+</ul>
+</div>
+
+            
+
+        <h5 class="divisor">标签</h5>
+        <section class="tags">
+            <div class="tags__container">
+             
+                <a 
+                    class="tags__tag" 
+                    href="/tags/HTML"
+                    tilte="Tag">HTML</a>         
+            
+            </div>
+        </section>
+
+    
+</main>
+    <script src="/scripts/script.js"></script>
+    
+</body>
+</html>
